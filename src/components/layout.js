@@ -23,10 +23,10 @@ class Layout extends React.Component{
         //         </Route>
         return(
             <div class="layout">
-                <Navigation/>
+                <Navigation authenticated={this.props.authenticated}/>
                 <GoToTop/>
                 <Routes>
-                    <Route path="/" element={<Landing/>} />
+                    <Route path="/" element={<Landing authenticated={this.props.authenticated}/>} />
                     <Route path="/students" element={<Students/>} />
                     <Route path="/faculties" element={<Faculties/>} />
                     <Route path="/courses" element={<Courses/>} />

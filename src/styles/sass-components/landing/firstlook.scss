@@ -1,30 +1,40 @@
 .firstlook{
-    height: 90vh;
+    height: 80vh;
     position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 75%, 0% 100%);
     &__figure{
         &_img{
             position: absolute;
             height: 100%;
             width: 100%;
             object-fit: cover;
-            object-position: top;
+            object-position: center;
             filter: grayscale(100%);
+            animation: open 1s linear;
+            
         }
         &_cap{
             z-index: 10;
-            transform: translate(15%,20%);
-            font-size: 9rem;
-            width: 50%;
+            transform: translate(15%,30%);
+            font-size: 7rem;
+            width: 60%;
             color: $color-white;
-            font-family: 'Oswald', sans-serif;
+            // font-family: 'Oswald', sans-serif;
+            // font-family: 'Libre Baskerville', serif;
+            font-family: 'PT Sans', sans-serif;
             text-transform: capitalize;
+            text-transform: uppercase;
             // margin-bottom: -15%;
+            opacity: 0;
+            animation: slideleft .7s ease-in-out .8s forwards;
+
         }
         &_btn{
             z-index: 1000;
             font-size: 2rem;
-            transform: translate(0%,-100%);
-            box-shadow: 0 0 3rem rgba($color-white,.5);
+            color: $color-black;
+            // transform: translate(0%,-50%);
+            // box-shadow: 0 0 3rem rgba($color-white,.5);
         }
 
     }

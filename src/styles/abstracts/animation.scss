@@ -1,0 +1,21 @@
+@keyframes slideleft {
+    0%{
+        transform: translate(15%,30%) translateX(-75rem);
+        opacity: .5;
+    }
+    100%{
+        transform: translate(15%,30%)  translateX(0rem);
+        opacity: 1;
+    }
+}
+@keyframes open {
+    0%{
+        clip-path: polygon(0 0, 0 0, 0 0, 0% 100%);
+    }
+    50%{
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0% 100%);
+    }
+    100%{
+        clip-path: polygon(0 0, 100% 0, 100% 75%, 0% 100%);        
+    }
+}

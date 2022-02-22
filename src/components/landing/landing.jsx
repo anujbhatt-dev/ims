@@ -7,7 +7,7 @@ class Landing extends Component{
 
       return (
           <div classname="landing">
-               <FirstLook/>
+               <FirstLook authenticated={this.props.authenticated}/>
                <h1>Landing</h1>
           </div>
       )

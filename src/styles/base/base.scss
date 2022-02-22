@@ -16,6 +16,7 @@ html{
   font-family: sans-serif;
   letter-spacing: .5px;
   font-family: 'Montserrat', sans-serif;
+  font-family: 'PT Sans', sans-serif;
   // color:$color-gig-font;
 
   // overflow-y: scroll;
@@ -38,7 +39,9 @@ body{
   margin: 0;
   padding: 0;
   min-height: 500vh;
-  // background-color: rgb(223, 241, 255);
+  width: 100vw;
+  overflow-x: hidden;
+  background-color: rgba($color-ims-grey,.2);
 }
 
 .layout{
