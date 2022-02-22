@@ -1,0 +1,63 @@
+.students{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 2rem 5rem;
+    &__div{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        // padding: 0 .5rem;
+    }
+    &__search{
+
+    }
+    &__h1{
+        font-weight: 100;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+    }
+    &__table{
+        & thead{
+            font-size: large;
+        }
+    }
+}
+
+.search{
+    position: relative;
+    &__label{
+        position: absolute;
+        background-color: #E5E3C9;
+        z-index: 10;
+        height: 4rem;
+        width: 5rem;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        & img{
+            height: 50%;
+        }
+    }
+    &__input{
+    //     box-shadow: 0 -.5rem 2rem rgba($color-black,.3);
+        height: 4rem;
+        width: 50rem;
+        border: none;
+        background-color: #EEEDDE;
+        padding-left: 5.5rem;
+        border-right: 3px solid transparent;
+        transition: .2s;
+        font-size: 1rem;
+        margin-bottom: 1rem;
+        &:hover{
+            border-right: 3px solid rgb(110, 161, 228);
+        }
+        &:focus{
+            outline: none;
+            border-right: 3px solid #66bc26;
+        }
+    }
+}

@@ -11,6 +11,7 @@
 @import "styles/base/base";
 @import "styles/base/utils";
 @import "styles/base/btn";
+@import "styles/base/table";
 
 // <--sass-components-->
 
@@ -30,3 +31,6 @@
 //landing
 @import "styles/sass-components/landing/landing";
 @import 'styles/sass-components/landing/firstlook';
+
+//students
+@import 'styles/sass-components/students/students';

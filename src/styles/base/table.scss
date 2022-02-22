@@ -1,0 +1,84 @@
+.table{
+    // font-size: large;
+    text-align: center;
+    text-transform: capitalize;
+    border-spacing: 0;
+    background-color: rgba($color-black,.1);
+    // border: 1px solid black;
+    box-shadow: 0 3rem 3rem rgba($color-black,.3);
+    &__head{
+        &_th{
+            // min-width: 1rem;
+            padding: 1rem 2rem;
+            font-size: 1.5rem;
+            margin: 1rem;
+            background-color: rgba($color-ims-grey,1);
+            color: $color-white;
+            font-weight: 400;
+        }
+    }
+    &__body{
+        
+        &_tr{
+            &-td{
+                min-width: 10rem;
+                padding: 1rem 2rem;
+                font-size: 1.5rem;
+                margin: 1rem;
+                // background-color: rgba($color-ims-grey,1);
+                // color: $color-white;
+                font-weight: 400;
+                & img{
+                    height: 3rem;
+                }
+                // transition: .2s;
+                // &:hover{
+                //     background-color: pink;                    
+                // }
+                
+
+            }
+        }
+    }
+
+}
+
+
+
+
+
+.delete{
+    cursor: pointer;
+    &:hover{
+        animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both infinite;
+        transform: translate3d(0, 0, 0);
+        backface-visibility: hidden;
+        perspective: 1000px;
+    }
+}
+
+.update{
+    cursor: pointer;
+    &:hover{
+        animation: spin 0.82s cubic-bezier(.36,.07,.19,.97) both infinite;
+        transform: rotate(360);
+        backface-visibility: hidden;
+        perspective: 1000px;
+    }
+}
+
+.pagination{
+    margin-top: 5rem;
+    &__icon{
+        padding: 1rem 2rem;
+        background-color: rgba($color-ims-grey,.1);
+       
+    }
+    &__count{
+        margin: 0 2rem;
+    }
+    font-size: 2.5rem;
+    & img{
+       height: 2rem;
+    }
+}
