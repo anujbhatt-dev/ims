@@ -1,0 +1,25 @@
+.btn{
+    border: none;
+    &__white{
+        min-width: 15rem;
+        padding: 1.5rem 3rem;
+        background-color: rgba($color-white,1);
+        color: rgba($color-black,1);
+        transition: .2s;
+        &:hover{
+            background-color: rgba($color-black,1);
+            color: rgba($color-white,1);
+        }
+    }
+    &__black{
+        min-width: 15rem;
+        padding: 1rem 2rem;
+        background-color: rgba($color-black,1);
+        color: rgba($color-white,1);
+        transition: .2s;
+        &:hover{
+            background-color: rgba($color-white,1);
+            color: rgba($color-black,1);
+        }
+    }
+}
