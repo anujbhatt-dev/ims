@@ -1,5 +1,7 @@
 import React, {Component} from "react"
 import FirstLook from "./firstlook";
+import Bighead from "../bighead";
+import WhyManage from "./whymanage";
 
 class Landing extends Component{
 
@@ -7,8 +9,8 @@ class Landing extends Component{
 
       return (
           <div classname="landing">
-               <FirstLook authenticated={this.props.authenticated}/>
-               <h1>Landing</h1>
+                <FirstLook authenticated={this.props.authenticated}/>
+                <WhyManage/>
           </div>
       )
     }

@@ -1,0 +1,20 @@
+.bigHead{
+    perspective: 1000px;
+    text-align: center;
+    font-size: 7rem;
+    text-transform: uppercase;
+    &__1{
+        margin-left: 50rem;
+        margin-bottom: -10rem;
+        transform: rotate(-3deg) rotateX(-90deg);
+        animation: flip-down1 .6s linear 1s forwards;
+        // backface-visibility: hidden;
+        opacity: 0;
+    }
+    &__2{
+        transform: rotate(5deg)  rotateX(-90deg);
+        animation: flip-down2 .6s linear 1s forwards;
+        // backface-visibility: hidden;
+        opacity: 0;
+    }
+}

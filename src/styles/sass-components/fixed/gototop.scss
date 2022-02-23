@@ -2,8 +2,8 @@
   cursor: pointer;
   z-index: 1000001;
   position: fixed;
-  height: 6rem;
-  width: 6rem;
+  height: 5rem;
+  width: 5rem;
   border-radius:100px;
   display: flex;
   justify-content: center;
@@ -11,8 +11,9 @@
   bottom: 6rem;
   right: 6rem;
   display: none;
+  background-color: rgba($color-ims-grey,.8);
   & img{
-    height: 5rem;
+    height: 6rem;
     transform: rotate(-100deg);
   }
 }

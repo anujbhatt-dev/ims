@@ -189,10 +189,19 @@ const Students = () =>{
          currentPage:1   
         })
         
-        const newData = data.splice((state.currentPage-1)*10, 10);
+        // const newData = data.splice((state.currentPage-1)*10, 10);
+        // alert(JSON.stringify(data))
+
+        const scrollTop=()=>{
+            window.scrollTo({
+                top: 0,
+                left: 0,
+                behavior: 'smooth'
+              });
+        }
 
         const minusPage=()=>{
-            alert("i m touched")
+            // alert("i m touched")
             if(state.currentPage===1 || state.currentPage<=1){
                 setState({
                     currentPage:1
@@ -202,6 +211,7 @@ const Students = () =>{
                     currentPage:state.currentPage-1
                 })
             }
+            scrollTop()
         }
 
         const plusPage=()=>{
@@ -249,7 +259,7 @@ const Students = () =>{
                           </th>
                       </thead>
                       <tbody className="table__body students__table_body">
-                          {  newData.map((item,i)=>{
+                          {  data.map((item,i)=>{
                               
                               return <tr className="table__body_tr students__table_body-tr">
                                   <td style={(i%2==0)?{background:"#EEEDDE"}:{background:"#E5E3C9"} } className="table__body_tr-td students__table_body-tr--td">

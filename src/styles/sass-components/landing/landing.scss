@@ -1,3 +1,19 @@
 .landing{
     padding: 10rem;
+    &__whyManage{
+        margin-top: -10rem;
+
+        &_head{
+
+        }
+        &_text{
+           text-align: center;
+           width: 50%;
+           margin: 5rem auto;
+           font-size: 1.5rem;
+           line-height: 2;
+           color: $color-ims-grey;
+           
+        }
+    }
 }
