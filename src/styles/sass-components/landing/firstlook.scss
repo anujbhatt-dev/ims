@@ -11,11 +11,12 @@
             object-position: center;
             filter: grayscale(100%);
             animation: open 1s linear;
+            backface-visibility: hidden;
             
         }
         &_cap{
-            z-index: 10;
-            transform: translate(15%,30%);
+            z-index: 10000;
+            transform: translate(15%,20%);
             font-size: 7rem;
             width: 60%;
             color: $color-white;
@@ -24,16 +25,18 @@
             font-family: 'PT Sans', sans-serif;
             text-transform: capitalize;
             text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 1rem;
+            // font-style: italic;
             // margin-bottom: -15%;
             opacity: 0;
             animation: slideleft .7s ease-in-out .8s forwards;
-
+            backface-visibility: hidden;
         }
         &_btn{
-            z-index: 1000;
             font-size: 2rem;
             color: $color-black;
-            // transform: translate(0%,-50%);
+            transform: translate(0%,-4rem);
             // box-shadow: 0 0 3rem rgba($color-white,.5);
         }
 

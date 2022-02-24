@@ -14,12 +14,7 @@ const FirstLook = (props) =>{
               <figure className="firstlook__figure">
                   <img  className="firstlook__figure_img" src={college} alt="colllege image"/>
                   <figcaption className="firstlook__figure_cap" >
-                      <div >welcome to<br/> institute management<br/> system</div>
-                      {
-                          props.authenticated?
-                          <button onClick={()=>{navigate("/signup")}} className="btn btn__white firstlook__figure_btn">Register Now</button>:
-                          null
-                      }
+                      <div >welcome to<br/>a.m institute management<br/> system</div>                      
                   </figcaption>
               </figure>
         </div>

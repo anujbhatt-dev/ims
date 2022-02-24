@@ -1,5 +1,6 @@
 import React, {Component} from "react"
 import {NavLink} from "react-router-dom"
+import logo from "../../assets/images/logo.png"
 
 class Navigation extends Component{
 
@@ -9,7 +10,7 @@ class Navigation extends Component{
            <div className="navigation">
 
                <div className="navigation__brandLogo">
-                    <img src="{logo}" alt=""/>
+                    <img src={logo} alt="AM logo"/>
                </div>
                <div className="navigation__items">
                    <NavLink style={({isActive})=>{return {backgroundColor: isActive? "white":"transparent", color: isActive? "black":"white"}}}  to="/" className="navigation__items_item navigation__items_item">Home</NavLink>
@@ -21,17 +22,9 @@ class Navigation extends Component{
                         <NavLink style={({isActive})=>{return {backgroundColor: isActive? "white":"transparent", color: isActive? "black":"white"}}}  to="/courses" className="navigation__items_item navigation__items_item">Courses</NavLink>,
                         <NavLink style={({isActive})=>{return {backgroundColor: isActive? "white":"transparent", color: isActive? "black":"white"}}}  to="/library" className="navigation__items_item navigation__items_item">Library</NavLink>                   
                        ]:
-                       null
-                   }
-                   <NavLink style={({isActive})=>{return {backgroundColor: isActive? "white":"transparent", color: isActive? "black":"white"}}}  to="/about" className="navigation__items_item navigation__items_item">About</NavLink>
-                   <NavLink style={({isActive})=>{return {backgroundColor: isActive? "white":"transparent", color: isActive? "black":"white"}}}  to="/contact" className="navigation__items_item navigation__items_item">Contact</NavLink>
-                   {
-                          this.props.authenticated?
-                          null:
-                          [
-                           <NavLink style={({isActive})=>{return {backgroundColor: isActive? "white":"transparent", color: isActive? "black":"white"}}}  to="/signup" className="navigation__items_item navigation__items_item">Signup</NavLink>,
-                           <NavLink style={({isActive})=>{return {backgroundColor: isActive? "white":"transparent", color: isActive? "black":"white",border:"1px solid white"}}}  to="/signin" className="navigation__items_item navigation__items_item">Login</NavLink>
-                          ]
+                       [
+                        <NavLink style={({isActive})=>{return {backgroundColor: isActive? "white":"transparent", color: isActive? "black":"white",border:"1px solid white"}}}  to="/signin" className="navigation__items_item navigation__items_item">Login</NavLink>
+                       ]
                    }
                </div>
            </div>

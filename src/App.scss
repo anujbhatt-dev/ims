@@ -16,6 +16,7 @@
 @import "styles/base/loader";
 @import "styles/base/modal";
 @import "styles/base/backdrop";
+@import "styles/base/canvas";
 
 // <--sass-components-->
 
@@ -26,15 +27,18 @@
 @import "styles/sass-components/fixed/gototop";
 @import "styles/sass-components/fixed/navigation";
 
-//about
-@import "styles/sass-components/about/about";
-
-//contact
-@import "styles/sass-components/contact/contact";
-
 //landing
 @import "styles/sass-components/landing/landing";
 @import 'styles/sass-components/landing/firstlook';
 
 //students
 @import 'styles/sass-components/students/students';
+
+//signin
+@import 'styles/sass-components/signin/signin';
+
+//about
+@import "styles/sass-components/about/about";
+
+//contact
+@import "styles/sass-components/contact/contact";

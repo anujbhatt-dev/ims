@@ -5,13 +5,20 @@ import './App.scss';
 class App extends React.Component{
 
   state={
-    authenticated:true
+    authenticated:0
+  }
+
+  AuthHandler=()=>{
+    this.setState({
+      authenticated:!this.state.authenticated
+    })
+    this.props.history.push("/students")
   }
 
   render(){
     return (
       <div className="App">
-        <Layout authenticated={this.state.authenticated}/>
+        <Layout authHandler={this.AuthHandler} authenticated={this.state.authenticated}/>
       </div>
     );
   }

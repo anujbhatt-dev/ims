@@ -1,0 +1,11 @@
+.backdrop{
+    cursor: pointer;
+    position: fixed;
+    top:0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba($color-black,.5);
+    filter: blur(2px);
+    z-index: 10000000000000000;
+}

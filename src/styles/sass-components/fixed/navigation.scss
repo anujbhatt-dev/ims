@@ -9,12 +9,16 @@
   width: 100vw;
   top: 0;
   left: 0;
+  padding-right: 2rem;
   &:hover{
     // background-color: rgba($color-black,1);
   }
 
   &__brandLogo{
-
+    & img{
+      height: 4rem;
+      // margin-left: 2rem;
+    }
   }
   &__items{
     display: flex;
@@ -22,15 +26,25 @@
     align-items:center;
     font-size: 1.2rem;
     &_item{
-       margin: 1rem 2rem;
-       padding:1rem 2rem;
+       margin: 1rem 1rem;
+       padding:.5rem 2rem;
        text-decoration: none;
        color: $color-white;
-      //  border-radius: 10px;
+       border-radius: 10px;
        transition: .2s;
+       border:"1px solid transparent";
+       box-shadow: 0 0.5rem 1rem rgba($color-black,.5);
        &:hover{
         background-color: rgba($color-white,1);
         color: rgba($color-black,1);
+        transform: translateY(-3px);
+        box-shadow: 0 0.8rem 1.5rem rgba($color-black,.8);
+       }
+       &:active{
+        background-color: rgba($color-white,1);
+        color: rgba($color-black,1);
+        transform: translateY(3px);
+        box-shadow: 0 0.8rem 1.5rem rgba($color-black,.05);
        }
     }
   }

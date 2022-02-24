@@ -1,0 +1,36 @@
+.contact{
+    margin: 5rem;
+    &__box{
+        padding: 5rem;
+        height: 80vh;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        background-image: linear-gradient(131deg, rgba($color-ims-grey,0.9) 0%, rgba($color-ims-grey,0.9) 58%, rgba(41,33,33,0) 58%), url("../../../assets/images/contactbg.jpg") ;
+        background-position: center;
+        filter: blur(2px);
+        background-size: cover;
+        box-shadow: 0 2rem 2rem rgba($color-black,.5);
+        transition: 1s all;
+        & form{
+            filter: blur(0px);
+        }
+        &:hover{
+            filter: blur(0px);
+        }
+
+    }
+    & input{
+        width: 40rem;    
+    }
+    & label{
+        text-transform: capitalize;
+        color: white;
+        font-size: 2rem;
+    }
+    & button{
+        width: 40rem;
+        border: 1px solid transparent;
+    }
+}

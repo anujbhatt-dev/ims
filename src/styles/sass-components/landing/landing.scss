@@ -7,12 +7,16 @@
 
         }
         &_text{
+            display: flex;
+            align-items: center;
+            justify-content: center;
            text-align: center;
            width: 50%;
            margin: 5rem auto;
            font-size: 1.5rem;
            line-height: 2;
            color: $color-ims-grey;
+           height: 60vh;
            
         }
     }

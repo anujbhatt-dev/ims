@@ -1,0 +1,38 @@
+.about{
+    margin: 5rem;
+    &__1{
+        margin: 5rem;
+        padding: 5rem;
+        background-color: rgba($color-black,.1);
+        height: 80vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom-left-radius: 180px;
+        border-top-right-radius: 180px;
+        &--rev{
+            background-color: rgba($color-black,.2);
+            border-top-left-radius: 180px;
+            border-bottom-right-radius: 180px;
+            border-bottom-left-radius: 0;
+            border-top-right-radius: 0;
+        }
+        &_text{
+            flex-basis: 30%;
+            font-size: 1.5rem;
+            line-height: 1.5;
+            color: $color-ims-grey;
+            & h2{
+                font-size: 5rem;
+
+            }
+        }
+
+        &_img{
+            flex-basis: 50%;
+            & img{
+                height: 100%;
+            }
+        }
+    }
+}

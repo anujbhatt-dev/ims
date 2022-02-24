@@ -5,9 +5,20 @@ import searching from "../../assets/images/searching.png";
 import plus from "../../assets/images/plus.png";
 import minus from "../../assets/images/minus.png";
 import slash from "../../assets/images/slash.png";
+import Backdrop from "../UI/backdrop";
+import Modal from "../UI/modal";
+import { updateHandeler } from "../actions/update";
+import { deleteHandeler } from "../actions/delete";
+import { insertHandeler } from "../actions/insert";
 
 
 const Students = () =>{
+
+       const[show,setShow]=useState(0)
+
+       const showHandler=(i)=>{
+           setShow(!show)
+       }
 
 
        const data = [
@@ -227,7 +238,7 @@ const Students = () =>{
         }
 
         return(
-            <div className="students">
+            <><div className="students">
                 <div  className="students__div">
                     <h1 className="search students__search">
                         <label className="search__label" htmlFor="search">
@@ -289,10 +300,10 @@ const Students = () =>{
                                   <td style={(i%2==0)?{background:"#EEEDDE"}:{background:"#E5E3C9"} } className="table__body_tr-td students__table_body-tr--td">
                                         {item.batch}
                                   </td>
-                                  <td style={(i%2==0)?{background:"#EEEDDE"}:{background:"#E5E3C9"} } className="table__body_tr-td students__table_body-tr--td">
+                                  <td onClick={()=>updateHandeler("student",showHandler,item,i)} style={(i%2==0)?{background:"#EEEDDE"}:{background:"#E5E3C9"} } className="table__body_tr-td students__table_body-tr--td">
                                         <img className="update" src={update} alt="update icon" />
                                   </td>
-                                  <td style={(i%2==0)?{background:"#EEEDDE"}:{background:"#E5E3C9"} } className="table__body_tr-td students__table_body-tr--td">
+                                  <td  onClick={()=>deleteHandeler("student",showHandler,item.stid,i)} style={(i%2==0)?{background:"#EEEDDE"}:{background:"#E5E3C9"} } className="table__body_tr-td students__table_body-tr--td">
                                         <img className="delete" src={del} alt="delete icon" />
                                   </td>
                               </tr>
@@ -306,9 +317,20 @@ const Students = () =>{
                           <div onClick={()=>{minusPage()}} className="pagination__icon"><img className="" src={minus} alt="delete icon" /></div>
                           <div  className="pagination__count">{state.currentPage}<span><img className="" src={slash} alt="delete icon" /></span>{state.pages}</div>
                           <div  onClick={()=>{plusPage()}}  className="pagination__icon"><img className="" src={plus} alt="delete icon" /></div> 
-                  </div> 
+                  </div>
+                  {show?[
+                        <Backdrop show={showHandler}/>,
+                        <Modal  >
+                            <h1 onClick={()=>showHandler()}>i am student</h1>
+                            h1
+                            {data.map((item)=>{
+                               return <h2>{item.stid}</h2>
+                            })}
+                        </Modal>
+                   ]:null}
                   
             </div>
+        </>
         )
     
 }

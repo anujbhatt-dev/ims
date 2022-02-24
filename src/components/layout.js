@@ -10,17 +10,31 @@ import Library from "./library/library";
 import Students from "./students/students";
 import Faculties from "./faculties/faculties";
 import Courses from "./courses/courses";
+import Signin from "./sign/signin"
 import NavigationMob from './fixed/navigationMob'
-
+import Loader from "./UI/loader"
 
 class Layout extends React.Component{
+
+    state={
+        loading:true
+    }
+
+    componentDidMount=()=>{
+        setTimeout(() => {
+            this.setState({
+                loading:false
+            })
+        }, 3000);
+        // this.props.authHandler()
+    }
+
     render(){
-        // <Route path="/students">
-        //             <Landing/>
-        //         </Route>
-        //         <Route path="/faculties">
-        //             <Landing/>
-        //         </Route>
+
+       if(this.state.loading){
+           return <Loader/>
+       } 
+
         return(
             <div class="layout">
                 <Navigation authenticated={this.props.authenticated}/>
@@ -31,8 +45,7 @@ class Layout extends React.Component{
                     <Route path="/faculties" element={<Faculties/>} />
                     <Route path="/courses" element={<Courses/>} />
                     <Route path="/library" element={<Library/>} />
-                    <Route path="/contact" element={<Contact/>} />
-                    <Route path="/about" element={<About/>} />              
+                    <Route path="/signin" element={<Signin authHandler={this.props.authHandler}/>} />        
                 </Routes>
                 <Footer/>
             </div>
